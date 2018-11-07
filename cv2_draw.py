@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 
 img = cv2.imread('sample.jpg', cv2.IMREAD_COLOR)
+print(type(img[0, 0]))
 
 # CV2 uses BGR color space
 cv2.line(img, (0, 0), (150, 150), (255, 255, 255), 15)
@@ -12,8 +13,8 @@ cv2.circle(img, (100, 50), 20, (0, 0, 255), -1)
 pts = np.array([[10, 5], [20, 20], [30, 30], [50, 10], [100, 160]], dtype=np.int32)
 pts = pts.reshape((-1, 1, 2))
 
-# print(list(pts))
-# print([pts])
+print(list(pts))
+print([pts])
 
 cv2.polylines(img, [pts], isClosed=True, color=(255, 0, 255), thickness=3)
 
