@@ -33,4 +33,4 @@ while loop:
 # Release the task assigned to camera
 cap.release()
 out.release()
-cv2.destroyAllWindows
+cv2.destroyAllWindows()
