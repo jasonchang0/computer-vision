@@ -6,6 +6,7 @@ import os
 os.chdir('../data')
 
 img = cv2.imread('foreground_extraction.jpg')
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 # third dimension of the image is color channels
 mask = np.zeros(img.shape[:2], np.uint8)
