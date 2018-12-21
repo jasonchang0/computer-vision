@@ -44,6 +44,7 @@ while loop:
     res = cv2.matchTemplate(frame_gray, temp, cv2.TM_CCOEFF_NORMED)
     threshold = 0.8
     loc = np.where(res >= threshold)
+    print(loc)
 
     for point in zip(*loc[::-1]):
         cv2.rectangle(frame, point, (point[0] + w, point[1] + h), (0, 255, 255), 2)
