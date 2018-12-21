@@ -29,6 +29,7 @@ print(np.array(frog).shape)
 img[0:bottom - top, 0:right - left] = frog
 
 cv2.imshow('image', img)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
