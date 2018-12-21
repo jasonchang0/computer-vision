@@ -59,12 +59,12 @@ while loop:
 
     # difference between input image and Opening of the image
     # tophat = image - opening = image - (image - false + ves) = false + ves
-    tophat = cv2.morphologyEx(img, cv2.MORPH_TOPHAT, kernel=kernel)
+    tophat = cv2.morphologyEx(frame, cv2.MORPH_TOPHAT, kernel=kernel)
     # cv2.imshow('Tophat', tophat)
 
     # difference between input image and Closing of the image
     # blackhat = image - closing = image - (image - false - ves) = false - ves
-    blackhat = cv2.morphologyEx(img, cv2.MORPH_BLACKHAT, kernel=kernel)
+    blackhat = cv2.morphologyEx(frame, cv2.MORPH_BLACKHAT, kernel=kernel)
     # cv2.imshow('BLackhat', blackhat)
 
     cv2.imshow('frame', frame)
