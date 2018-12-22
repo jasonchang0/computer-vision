@@ -15,6 +15,10 @@ out = cv2.VideoWriter('output.mp4', fourcc, 20.0, (int(cap.get(3)), int(cap.get(
 
 loop = True
 while loop:
+    '''
+    "Frame" -> next frame in the camera (via "cap"). 
+    "Ret" -> return value from getting the camera frame, either true of false.
+    '''
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 

@@ -49,7 +49,8 @@ while loop:
 
     '''
     # Convolution-based smoothing and blurring
-    kernel = np.ones((10, 10), np.float32) / (15 * 15)
+    stride = 10
+    kernel = np.ones((stride, stride), np.float32) / (stride ** 2)
     smooth = cv2.filter2D(res, -1, kernel=kernel)
 
     # blur = cv2.GaussianBlur(res, (15, 15), 0)
